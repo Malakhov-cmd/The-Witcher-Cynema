@@ -1,0 +1,505 @@
+@font-face {
+  font-family: "MasonChronicles";
+  src: url("../fonts/MasonChronicles.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*Два формата одного шрифта прямо на нашем пк*/
+@font-face {
+  font-family: "MassonChronicle";
+  src: url("../fonts/MassonChronicle.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #141218;
+  /*подключили шрифт для всего сайта*/
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background-image: url(../img/BX8lVyTxY7w.jpg);
+  /*Повтор фона*/
+  background-repeat: no-repeat;
+  /*Приклепляем к правому краю*/
+  background-position: top right 20%;
+  color: #ffffff;
+
+  /*Прибиваем футер к нижней части страницы*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  width: 95%;
+  max-width: 1140px;
+  /*рамка с цветом из красного*/
+  /*border: 1px solid red;*/
+  /*равнение по серидине*/
+  margin: auto;
+}
+.header {
+  /*в одну линию(горизонтально)*/
+  display: flex;
+  /*ровняет контент вертикально*/
+  align-items: center;
+  /*задает равное расстояние для объектов*/
+  justify-content: space-between;
+  /*отступ сверху внутри одного объекта*/
+  padding-top: 60px;
+  margin-bottom: 90px;
+}
+.menu-list {
+  /*отступ справа*/
+  margin-right: auto;
+  margin-left: 67px;
+}
+.menu-link {
+  font-size: 14px;
+  line-height: 16px;
+  /*убрать подчеркивание*/
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: 24px;
+}
+.social-link {
+  margin-left: 20px;
+  text-decoration: none;
+}
+.genre {
+  font-size: 14px;
+  line-height: 16px;
+  /*чтобы работали отступы необходима инициализация в виде блока*/
+  display: block;
+  margin-bottom: 16px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+}
+.rating-nummbers {
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 9px;
+  margin-bottom: 10px;
+}
+.main-title {
+  font-weight: 500;
+  font-size: 76px;
+  /*применение шрифта или загрузка любого в случае неудачи*/
+  font-family: "MasonChronicles", serif;
+  margin-bottom: 10px;
+}
+.main-descrioption {
+  max-width: 458px;
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+.buttone {
+  display: inline-block;
+  background: #9d2929;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  padding: 22px 72px;
+  text-decoration: none;
+}
+.buttone:active {
+  color: #fff;
+}
+.main-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 85px;
+}
+.play {
+  background: #9d2929;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  margin-left: 439px;
+}
+.play:before {
+  /*Пустой*/
+  content: "";
+  width: 132px;
+  height: 132px;
+  background: #9d2929;
+  /*прозрачность*/
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+  /*отступы*/
+  left: -16px;
+  top: -16px;
+  /*Анимация сердцебиения*/
+  animation: pulse 0.5s ease-in-out 0.5s infinite;
+}
+.play-image {
+  position: relative;
+  /*Сдвиг именно картинки*/
+  transform: translateX(10px);
+  margin-bottom: 60px;
+  padding: 25px;
+}
+.series {
+  display: flex;
+  align-items: center;
+  /*по разные стороны класса*/
+  position: relative;
+  max-width: 420px;
+}
+/*Оформление слайдера*/
+.card {
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%);
+  border-radius: 8px;
+  width: 167px;
+  height: 113px;
+  display: flex;
+  /*Управляем как нам удобно*/
+  flex-direction: column;
+  /*место отображение содержимого класса*/
+  justify-content: flex-end;
+  padding: 10px;
+  margin-right: 40px;
+}
+.card-subtitle {
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 2px;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+.card-title_4 {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+}
+.series-1 {
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url(../img/series-card/serie-1.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.link_series_1 {
+  text-decoration: none;
+  color: #ffffff;
+}
+.series-2 {
+  /*градиент*/
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url(../img/series-card/serie-2.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.series-3 {
+  /*градиент*/
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url(../img/series-card/series-3.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.series-4 {
+  /*градиент*/
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url(../img/series-card/series-4.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.series-5 {
+  /*градиент*/
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url(../img/series-card/series-5.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.series-6 {
+  /*градиент*/
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url(../img/series-card/series-6.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.series-7 {
+  /*градиент*/
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url(../img/series-card/series-7.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.series-8 {
+  /*градиент*/
+  background: linear-gradient(180deg, rgba(20, 18, 24, 0.5) 0%, #2d2d2d 100%),
+    url(../img/series-card/series-8.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.player {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+.arrow {
+  height: 23px;
+  width: 32px;
+  border: none;
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /*Прозрачный цвет*/
+  background-color: transparent;
+  /*передвигаем вверх*/
+  position: absolute;
+  top: 50%;
+  right: -32px;
+}
+.swiper-container {
+  /*максимальная ширина*/
+  max-width: 420px;
+  margin-left: 0;
+}
+/*footer*/
+.footer {
+  background-color: #141218;
+  /*отступы*/
+  padding: 20px 0;
+  /*закрепить позицию*/
+  margin-top: auto;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-link {
+  text-decoration: none;
+  color: #3a383d;
+  margin-right: 25px;
+}
+.copyright {
+  color: #3a383d;
+}
+.menu-button {
+  display: none;
+}
+.description_serie_text {
+  max-width: 550px;
+  margin-top: 35px;
+}
+.main-descrioption_1 {
+  margin-bottom: 13px;
+}
+.main-description_2 {
+  margin-bottom: 13px;
+}
+.main-description_3 {
+  margin-bottom: 13px;
+}
+.main-description_4 {
+  margin-bottom: 13px;
+}
+.main-description_5 {
+  margin-bottom: 13px;
+}
+.main-description_6 {
+  margin-bottom: 13px;
+}
+.main-title-serie {
+  font-weight: 500;
+  font-size: 76px;
+  /*применение шрифта или загрузка любого в случае неудачи*/
+  font-family: "MasonChronicles", serif;
+  margin-bottom: 10px;
+  margin-top: 75px;
+}
+/*responsive*/
+@media (max-width: 1000px) {
+  .Description_serie {
+    margin-top: 300px;
+  }
+  .player iframe {
+    width: 800px;
+    height: 505px;
+  }
+}
+
+@media (max-width: 760px) {
+  .play {
+    display: none;
+  }
+  .main-title-serie {
+    font-weight: 300;
+    font-size: 36px;
+  }
+
+  .footer-content {
+    /*ссылки друг под другом*/
+    flex-direction: column;
+    /*Прибить к углу*/
+    align-items: flex-start;
+  }
+  .copyright {
+    display: block;
+    margin-bottom: 0px;
+  }
+  /*отключим у первой ссылки*/
+  .footer-link:first-child {
+    margin-left: 0;
+  }
+  .player iframe {
+    width: 600px;
+    height: 475px;
+  }
+}
+@media (max-width: 540px) {
+  /*Начало создания гамбургера*/
+  .menu-button {
+    display: block;
+    position: absolute;
+    right: 35px;
+    top: 40px;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  /*Псевдоэлемент*/
+  .menu-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: -7px;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    /*плавность*/
+    transition: transform 0.2s;
+    border: none;
+  }
+  .menu-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: 7px;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: transform 0.2s;
+    border: none;
+  }
+  .header {
+    display: none;
+    /*убрали следование блоков*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: red;
+    flex-direction: column;
+    width: 250px;
+    padding-bottom: 40px;
+  }
+  .header-active {
+    display: flex;
+    animation-delay: 0.5s;
+  }
+  /*Делаем крестик*/
+  .menu-button-active {
+    height: 0;
+  }
+  .menu-button-active::before {
+    /*повороты*/
+    transform: rotate(45deg);
+    margin-top: 0px;
+  }
+  .menu-button-active::after {
+    /*повороты*/
+    transform: rotate(-45deg);
+    margin-top: 0px;
+  }
+  /*ограничили табличку*/
+  .menu-list {
+    margin: auto;
+    /*менять местами*/
+    order: 2;
+    display: flex;
+    /*выровнили по вертикали*/
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  .logo {
+    margin-bottom: 17px;
+  }
+  .menu-link {
+    margin-right: 0px;
+    margin-bottom: 17px;
+  }
+  .social-link:first-child {
+    margin-left: 0px;
+  }
+  .social {
+    order: 1;
+    margin-bottom: 22px;
+  }
+  .swiper-container {
+    width: 80%;
+  }
+  .main-content {
+    margin-top: 224px;
+  }
+  .series {
+    width: 80%;
+  }
+  .player iframe {
+    width: 355px;
+    height: 300px;
+  }
+}
+@media (max-width: 540px) {
+  .main-content {
+    margin-top: 294px;
+  }
+  .swiper-container {
+    margin-bottom: 85px;
+  }
+}
+@media (max-width: 420px) {
+  .main-content {
+    margin-top: 294px;
+  }
+  .swiper-container {
+    margin-bottom: 85px;
+  }
+  .player iframe {
+    width: 305px;
+    height: 300px;
+  }
+}
